@@ -3,10 +3,6 @@ class Solution {
         long start = 0;
         long last = num;
         long mid = 0;
-        if(num == 1)
-        {
-            return true;
-        }
         while(start <= last)
         {
             mid = start + (last-start)/2;
