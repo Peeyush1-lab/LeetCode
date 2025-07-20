@@ -1,9 +1,9 @@
-int searchInsert(int* nums, int numsSize, int target)
-{
-    int mid,start = 0,end = numsSize-1;
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+       int mid,start = 0,end = nums.length-1;
     while(start<=end)
     {
-        mid = (start+end)/2;
+        mid = start + (end - start)/2;
         if(nums[mid] == target)
         {
             return mid;
@@ -17,5 +17,6 @@ int searchInsert(int* nums, int numsSize, int target)
             end = mid-1;
         }
     }
-    return start;
+    return start; 
+    }
 }
